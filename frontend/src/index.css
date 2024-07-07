@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .card {
+    @apply shadow-[-1px_3px_8px_4px_rgba(0,0,0,0.05)] rounded-[30px] flex flex-col justify-center items-center;
+    background: #fff;
+  }
+
+  .card-gray {
+    @apply bg-slate-50 rounded-[5px] shadow
+  }
+  
+  .overlay {
+    @apply fixed top-0 left-0 w-full h-full bg-[#00000080] z-[1000] flex justify-center items-center
+  }
+  
+  .abbapos-background {
+    background-image: linear-gradient(180deg, #215273 0%, #24CE7B 100%);
+  }
+  
+  .abbapos-black {
+      @apply opacity-80 mix-blend-overlay blur-[0.5px];
+      background: url('/assets/images/blackBackground.png'), lightgray 0% 0% / 100px 100px repeat;
+  }
+
+  .input-box {
+    @apply relative w-[283px] h-[45px] border border-[#dfe0e4] bg-white rounded-[5px] ;
+  }
+
+  .input-field {
+    @apply text-primary leading-normal text-[13px] w-full h-full focus:outline-none px-[34px] align-middle  placeholder-[#c0c0c0]
+  }
+
+  .input-box-field {
+    @apply w-full h-[45px] text-primary leading-normal text-[13px] px-[12px] placeholder-[#c0c0c0] border border-solid border-[#dfe0e4] bg-white rounded-[5px] 
+  }
+
+  .form-label {
+    @apply text-[15px] font-normal font-golos tracking-tight
+  }
+
+  .greenButton {
+    @apply bg-abbaGreen rounded-[5px] text-center font-bold text-white active:opacity-90 hover:drop-shadow-lg;
+  }
+
+  .greenButton-reverse {
+    @apply rounded-[5px] border-abbaGreen border-solid border text-center font-bold text-abbaGreen hover:greenButton
+  }
+
+  .button {
+    @apply rounded-[5px] text-center font-semibold text-[15px];
+  }
+
+  .grayButton {
+    @apply button bg-[#F4F5FB] text-blueGray 
+  }
+
+  .blueButton {
+    @apply button bg-primary  text-white 
+  }
+  
+  .previewButton {
+    @apply button text-primary border-solid border-[1px] border-primary hover:blueButton
+  }
+
+  .nav-h3 {
+    @apply w-[88px] h-[25px] text-center text-green-200 text-[15px] font-semibold
+  }
+  
+
+  .Link {
+    @apply flex flex-col justify-center items-center py-[15px]
+  }
+
+  .preview-table thead tr {
+    @apply flex flex-row justify-between items-start border-none
+  }
+
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .dropdown-toggle {
+    @apply cursor-pointer flex justify-between items-center p-2.5;
+  }
+  
+  /* Dropdown Options Container */
+  .dropdown-options {
+    @apply absolute w-full max-h-[200px] border bg-white overflow-y-auto z-[1] hidden rounded-[0_0_4px_4px] border-t-[none] border-solid border-[#ccc] left-0 top-full;
+  }
+  
+  /* Dropdown Options when Open */
+  .custom-dropdown.open .dropdown-options {
+    @apply block;
+  }
+  
+  /* Individual Option */
+  .option {
+    @apply cursor-pointer transition-[background-color] duration-[0.2s] p-2.5 hover:bg-[#f0f0f0];
+  }
+
+  h2 {
+    @apply font-golos text-primary text-xl font-semibold
+  }
+
+  h3 {
+    @apply font-golos text-[15px] text-primary
+  }
+
+  h4 {
+    @apply font-golos text-[13px] font-semibold text-primary
+  }
+
+  p {
+    @apply font-golos text-[13px] font-normal
+  }
+
+  thead {
+    @apply border-solid border-b-2 border-[#DFE0E4]
+  }
+
+  th {
+    @apply pb-[14px] text-[15px] text-primary font-medium font-golos align-text-top
+  }
+
+  tr {
+    @apply border-solid border-b-2 border-[#F2F3F8] 
+  }
+  
+  td {
+    @apply text-[13px] text-primary font-normal font-golos py-[14px] align-text-top
+  }
+
+
+
+
+  
+}
+
+/* input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #24CE7B;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+} */
+
+.Toastify__close-button {
+  color:white;
+  opacity: 1;
+}
+
+.Toastify__close-button:hover {
+  color:white;
+  opacity: 0.8;
+}
