@@ -8,7 +8,7 @@ Django
 Postman for API testing
 
 ### Front-End Tech Used
-Tanstack Query for Server State Management
-Zod for UI State Management
-Yup for Form Validation
-Tailwind for styling
+Tanstack Query for Server State Management \
+Zod for UI State Management \
+Yup for Form Validation \
+Tailwind for styling 
